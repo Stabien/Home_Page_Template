@@ -16,32 +16,68 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('polices/Poppins-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('polices/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Code Bold';
+    src: url('polices/CODE Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KeepCalm';
+    src: url('polices/KeepCalm-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     display: flex;
     flex-direction: column;
     margin: auto;
     width: 100%;
+
 }
 
 header {
+    top: 0px;
+    left: 0px;
     width: 100%;
-    height: 80px;
+    height: 70px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /*z-index: 1;*/
 }
 
 header h1 {
-    font-family: sans-serif;
-    margin-left: 35px;
+    position: absolute;
+    font-family: 'Poppins-Medium';
+    color: white;
+    left: 13%;
+    top: 0.3%;
+
 }
 
 nav {
     position: absolute;
-    left: 70%;
+    left: 72%;
+    top: 3%;
 }
 
 nav ul {
-    padding-top: 12px;
     display: flex;
     flex-direction: row;
 }
@@ -51,11 +87,24 @@ nav li {
 }
 
 nav a {
-    font-family: sans-serif;
-    font-size: 21px;
-    margin-right: 35px;
-    color: #00BFFF;
+    font-family: 'poppins-medium';
+    font-size: 19px;
+    padding-right: 17px;
+    padding-left: 17px;
+    margin: 0;
+    margin-top: 15px;
+    padding-top: 15px;
+    margin-bottom: 9px;
+    padding-bottom: 9px;
+    color: white;
     text-decoration: none;
+}
+
+a:hover{
+    color: #00BFFF;
+    /*border-bottom: solid 5px;*/
+    transition: 0.25s;
+
 }
 
 #background {
@@ -63,38 +112,38 @@ nav a {
     padding: 0;
     position: relative;
     width: 100%;
-    height: 540px;
-    background: url("images/header_background.jpg");
+    height: 600px;
+    background: url("images/coworking_banner.jpg");
 }
 
 #overlay {
     position: absolute;
-    top: 80px;
     background: rgba(24, 24, 24, 0.6);
     width: 100%;
-    height: 540px;
+    top: 0px;
+    height: 600px;
+    z-index: 1;
 }
 
-#overlay h1 {
+#banner_title {
     color: white;
-    font-family: sans-serif;
-    font-size: 65px;
+    font-family: 'KeepCalm';
+    font-size: 55px;
     position: absolute;
-    top: 18%;
-    left: 34.7%;
-    opacity: 1;
+    top: 26.4%;
+    left: 31.3%;
 }
 
-#overlay p {
-    width: 850px;
+#overlay h2 {
+    width: 700px;
     color: white;
-    font-family: sans-serif;
-    font-size: 14px;
+    font-family: 'poppins';
+    font-size: 19px;
     position: absolute;
-    top: 41%;
-    left: 27%;
+    top: 41.6%;
+    left: 30.7%;
     text-align: center;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 #overlay a {
@@ -108,12 +157,12 @@ nav a {
     margin: 0;
     font-size: 18px;
     font-family: sans-serif;
-    top: 58.5%;
+    top: 55%;
     left: 43%;
     padding: 8px;
     border-radius: 5px;
     border: 2px solid;
-    transition: 0.2s;
+    transition: 0.25s;
     width: 101px;
 }
 
@@ -125,12 +174,11 @@ nav a {
     margin: 0;
     font-size: 18px;
     font-family: sans-serif;
-    top: 58.5%;
+    top: 55%;
     left: 50%;
     padding: 8px;
     border-radius: 4px;
     border: 2px solid #00BFFF;
-    transition: 0.2s;
     text-align: center;
 }
 
@@ -138,6 +186,12 @@ nav a {
     background-color: white;
     color: black;
     border: 2px solid white;
+}
+
+#try_now:hover {
+    background-color: #1E90FF;
+    border-color: #1E90FF;
+    transition: 0.33s;
 }
 
 #circles_images {
@@ -155,35 +209,108 @@ nav a {
     background: white;
     border: solid 1px white;
     border-radius: 15px;
+    opacity: 0.5;
 }
 
 #second_circle {
-    margin-top: -4px;
+    margin-top: -1px;
     margin-right: 5px;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     background: white;
     border: solid 1px white;
     border-radius: 20px;
 }
 
-/*#fleches a {
+section {
+    /*background: Gainsboro;*/
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+#left_shape, #middle_shape, #right_shape {
+    /*background: white;*/
+    position: relative;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 100px;
+    width: 350px;
+    height: 350px;
+    /*background-color: Gainsboro;*/
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    /*box-shadow: 2px 2px 6px grey;*/
+}
+
+#icon_devices, #icon_planet, #icon_social {
     position: absolute;
-    text-decoration: none;
-    color: white;
-    font-size: 100px;
-    top: 35%;
-    opacity: 0.7;
-   background: grey;
-    border-radius: 50px;
-    padding: 10px;
+    width: 100px;
+    top: -10%;
+    left: 36%;
+}
+
+#icon_devices {
+    top: -9%;
+}
+
+#icon_social {
+    width: 118px;
+    left: 33.2%;
+    top: -9.2%;
+}
+
+aside h1 {
+    font-family: 'poppins';
+    font-size: 18px;
+}
+
+aside p {
+    position: absolute;
+    margin: 30px;
     text-align: center;
+    top: 27%;
+    font-family: sans-serif;
 }
 
-#left {
-    left: 3%;
+#devices {
+    position: absolute;
+    top: 17%;
+    left: 38.5%;
 }
 
-#right {
-    right: 3%;
-}*/
+#global {
+    position: absolute;
+    top: 17%;
+    left: 41%;
+}
+
+#social {
+    position: absolute;
+    top: 18%;
+    left: 41%;
+}
+
+#block_1 {
+    height: 350px;
+    background-color: Gainsboro;
+}
+
+#block_2 {
+    height: 380px;
+    background-color: brown;
+}
+
+#block_3 {
+    height: 350px;
+    background-color: white;
+}
+
+footer {
+    height: 400px;
+    background-color: grey;
+}
