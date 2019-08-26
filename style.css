@@ -242,29 +242,30 @@ a:hover{
     border-radius: 20px;
 }
 
-section {
+#section_services {
     display: flex;
     flex-direction: column;
-    height: 800px;
+    height: 765px;
     /*background: Gainsboro;*/
 }
 
 #title_services {
     text-align: center;
-    margin-top: 55px;
+    margin-top: 45px;
     font-family: 'Poppins';
-    font-size: 38px;
+    font-size: 35px;
     padding-bottom: 0px;
 }
 
-section h2 {
+#section_services h2 {
     text-align: center;
-    margin-top: -30px;
-    margin-bottom: 45px;
+    margin-top: -25px;
     font-family: 'poppins';
     font-size: 20px;
+    margin-bottom: 40px;
     color: grey;
 }
+
 #top_services {
     position: relative;
     display: flex;
@@ -426,14 +427,14 @@ section h2 {
     transform: translate(-50%);
 }
 
-#block_1 {
-    height: 450px;
-    background-color: #474747;
+#section_about {
+    height: 650px;
+    background-color: Grey;
     display: flex;
     flex-direction: column;
 }
 
-#block_1 h1 {
+#section_about h1 {
     color: white;
     font-family: 'KeepCalm';
     font-size: 40px;
@@ -442,24 +443,56 @@ section h2 {
     padding-top: 20px;
 }
 
-#block_1 p {
+#section_about p {
     color: white;
     font-family: 'poppins-medium';
     font-size: 20px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: -10px;
     text-align: center;
     width: 1200px;
 }
 
-#block_2 {
-    height: 380px;
-    background-color: #00BFFF;
+#person_images {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
 }
 
-#block_3 {
-    height: 350px;
-    background-color: white;
+#container_first_person, #container_second_person, #container_third_person {
+    display: flex;
+    flex-direction: column;
+}
+
+#person_images img {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -100px;
+    border: solid white 3px;
+    border-radius: 200px;
+}
+
+#person_images h1 {
+    margin-top: 0;
+    font-size: 20px;
+    font-family: 'poppins-medium';
+    text-align: center;
+}
+
+#person_images h2 {
+    color: Gainsboro;
+    text-align: center;
+    font-family: 'poppins';
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+#section_contact {
+    height: 380px;
+    background-color: #00BFFF;
 }
 
 footer {
