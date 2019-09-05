@@ -47,9 +47,8 @@
 body {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    width: 100%;
-
+    margin: 0;
+    width: 100%
 }
 
 header {
@@ -59,7 +58,6 @@ header {
     height: 70px;
     display: flex;
     flex-direction: row;
-    /*z-index: 1;*/
 }
 
 header h1 {
@@ -73,7 +71,7 @@ header h1 {
 
 nav {
     position: absolute;
-    left: 67%;
+    left: 65%;
     top: 3%;
 }
 
@@ -103,7 +101,6 @@ nav a {
 
 a:hover{
     color: #00BFFF;
-    /*border-bottom: solid 5px;*/
 
 }
 
@@ -168,17 +165,12 @@ a:hover{
 #learn_more {
     display: flex;
     color: white;
-    /*position: absolute;*/
-/*    margin: 0;*/
     font-size: 18px;
     font-family: sans-serif;
-/*    top: 55%;
-    left: 50%;
-    transform: translate(-100%); */
     padding: 8px;
     border-radius: 5px;
     border: 2px solid;
-    transition: 0.25s;
+    transition: 0.33s;
     width: 101px;
     margin-left: 5px;
     margin-right: 5px;
@@ -188,13 +180,10 @@ a:hover{
     width: 101px;
     background-color: #00BFFF;
     color: white;
-    /*position: absolute;*/
     margin-left: 5px;
     margin-right: 5px;
     font-size: 18px;
     font-family: sans-serif;
-/*    top: 55%;
-    left: 50%;*/
     padding: 8px;
     border-radius: 4px;
     border: 2px solid #00BFFF;
@@ -427,127 +416,24 @@ a:hover{
     transform: translate(-50%);
 }
 
-#section_about {
-    position: relative;
-    height: 520px;
-    /*background: ghostwhite;*/
-}
-
-#project_images {
-    display: flex;
-    flex-direction: column;
-}
-
-#project_images {
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    flex-direction: row;
-}
-
-#project_images div {
-    display: flex;
-    flex-direction: column;
-}
-
-#project_images h3 {
-    text-align: center;
-    font-size: 18px;
-    font-family: 'poppins';
-    margin: 0;
-    padding: 0;
-    margin-left: 5px;
-    margin-top: 20px;
-    opacity: 0.85;
-}
-
-#overlay_project_hover {
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    flex-direction: row;
-}
-
-#first_overlay, #second_overlay, #third_overlay, #fourth_overlay {
-    width: 310px;
-    height: 295px;
-    margin-left: 7px;
-    margin-right: 7px;
-    transition: 0.35s;
-    background-color: rgba(255, 0, 0, 0);
-    opacity: 0;
-    /*border: 2px solid;*/
-}
-
-#project_images img{
-    width: 310px;
-    height: 295px;
-    margin-left: 7px;
-    margin-right: 7px;
-}
-
-#first_overlay:hover, #second_overlay:hover, #third_overlay:hover, #fourth_overlay:hover {
-    opacity: 1;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-#section_about h1 {
-    text-align: center;
-    margin-top: 57px;
-    font-size: 35px;
-    font-family: 'poppins';
-}
-
-#section_about h2 {
-    margin-top: -30px;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'poppins';
-    color: grey;
-}
-
-#section_about h4 {
-    margin-top: 375px;
-    text-align: center;
-    font-family: 'poppins';
-    font-size: 20px;
-    color: black;
-    opacity: 0.8;
-}
-
-#overlay_project_hover p {
-    color: white;
-    text-align: center;
-    margin-top: 130px;
-    font-family: 'poppins';
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#section_who {
+#section_team {
     height: 650px;
     /*background-color: #474747;*/
     background: url('images/background_about.jpg') no-repeat;
-    background-size: 1920px;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
 }
 
-#overlay_section_who {
+#overlay_section_team {
     height: 650px;
-    width: 1920px;
+    width: 100%;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
 }
 
-#section_who h1 {
+#section_team h1 {
     color: white;
     font-family: 'KeepCalm';
     font-size: 40px;
@@ -556,7 +442,7 @@ a:hover{
     padding-top: 20px;
 }
 
-#section_who p {
+#section_team p {
     color: white;
     font-family: 'poppins-medium';
     font-size: 20px;
@@ -603,18 +489,112 @@ a:hover{
     margin-top: -10px;
 }
 
-#section_offer h1 {
-    color: white;
-    font-family: 'poppins';
-    font-size: 35px;
-    margin-top: 50px;
-    margin-left: 200px;
+#section_project {
+    position: relative;
+    height: 640px;
+    /*background: ghostwhite;*/
+}
 
+#project_images {
+    display: flex;
+    flex-direction: column;
+}
+
+#project_images {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: row;
+}
+
+#project_images div {
+    display: flex;
+    flex-direction: column;
+}
+
+#project_images h3 {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    margin-top: 20px;
+    opacity: 0.85;
+}
+
+#overlay_project_hover {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: row;
+}
+
+#first_overlay, #second_overlay, #third_overlay, #fourth_overlay {
+    width: 310px;
+    height: 295px;
+    margin-left: 7px;
+    margin-right: 7px;
+    transition: 0.35s;
+    background-color: rgba(255, 0, 0, 0);
+    opacity: 0;
+    /*border: 2px solid;*/
+}
+
+#project_images img{
+    width: 310px;
+    height: 295px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#first_overlay:hover, #second_overlay:hover, #third_overlay:hover, #fourth_overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#section_project h1 {
+    text-align: center;
+    margin-top: 57px;
+    font-size: 35px;
+    font-family: 'poppins';
+}
+
+#section_project h2 {
+    margin-top: -30px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'poppins';
+    color: grey;
+}
+
+#section_project h4 {
+    margin-top: 375px;
+    text-align: center;
+    font-family: 'poppins';
+    font-size: 20px;
+    color: black;
+    opacity: 0.8;
+}
+
+#overlay_project_hover p {
+    color: white;
+    text-align: center;
+    margin-top: 130px;
+    font-family: 'poppins';
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #section_contact {
     background: dodgerblue;
-    height: 600px;
+    height: 700px;
     display: flex;
     flex-direction: column;
 }
@@ -624,6 +604,24 @@ a:hover{
     color: white;
     font-family: 'poppins';
     font-size: 35px;
+    margin-bottom: 0;
+    /*border-bottom: solid 3px white;
+    padding-bottom: 25px;*/
+}
+
+#section_contact h2 {
+    text-align: center;
+    color: white;
+    font-family: 'poppins';
+    font-size: 18px;
+    opacity: 0.8;
+    margin-top: 0;
+}
+
+#section_contact h3 {
+    color: white;
+    font-family: 'poppins';
+    font-size: 28px;
 }
 
 #section_contact ul {
@@ -632,6 +630,7 @@ a:hover{
 }
 
 #section_contact li {
+    margin-bottom: -3px;
     color: white;
     list-style: none;
     font-family: 'poppins';
@@ -643,14 +642,14 @@ a:hover{
 }
 
 #content_contact {
-    margin-left: 40px;
-    margin-top: -15px;
+    margin-left: 50px;
+    margin-top: -25px;
     display: flex;
     flex-direction: row;
 }
 
-#message h2 {
-    margin-top: -5px;
+#message h3 {
+    margin-top: -2px;
     color: white;
     font-family: 'poppins';
     margin-left: 10px;
@@ -664,17 +663,36 @@ a:hover{
     flex-direction: column;
 }
 
-#Name, #Email {
-    width: 280px;
+::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+#First_Name, #Last_Name{
+    width: 250px;
     height: 40px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
     padding-left: 8px;
-    border: none;
     background: dodgerblue;
     color: white;
     border: 2px white solid;
+    transition: 0.35s;
+    font-size: 15px;
+}
+
+#Email {
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-left: 8px;
+    background: dodgerblue;
+    color: white;
+    border: 2px white solid;
+    transition: 0.35s;
+    font-size: 15px;
 }
 
 #your_message {
@@ -691,10 +709,16 @@ a:hover{
     background: dodgerblue;
     color: white;
     border: 2px white solid;
+    transition: 0.35s;
+    font-size: 15px;
+}
+
+#First_Name:focus, #Last_Name:focus, #Email:focus, #your_message:focus{
+    background: #1581eb;
 }
 
 #submit {
-    margin-top: 10px;
+    margin-top: 20px;
     width: 200px;
     margin-left: 10px;
     height: 50px;
@@ -702,6 +726,8 @@ a:hover{
     border: 2px solid white;
     color: white;
     transition: 0.3s;
+    border-radius: 2px;
+    font-size: 15px;
 }
 
 #submit:hover {
@@ -710,7 +736,23 @@ a:hover{
     color: dodgerblue;
 }
 
+/*#section_more_about_us {
+    height: 300px;
+    background: #474747;
+}*/
+
 footer {
-    height: 140px;
-    background-color: #232323;
+    height: 80px;
+    background-color: #313131;
+    display: flex;
+    flex-direction: row;
+}
+
+footer p {
+    color: white;
+    font-family: sans-serif;
+    margin-top: 34px;
+    margin-left: 300px;
+    font-size: 14px;
+    margin-right: 200px;
 }
