@@ -614,7 +614,7 @@ a:hover{
 
 #section_contact {
     background: dodgerblue;
-    height: 450px;
+    height: 600px;
     display: flex;
     flex-direction: column;
 }
@@ -626,7 +626,91 @@ a:hover{
     font-size: 35px;
 }
 
+#section_contact ul {
+    margin-top: 30px;
+    margin-left: 230px;
+}
+
+#section_contact li {
+    color: white;
+    list-style: none;
+    font-family: 'poppins';
+    font-size: 18px;
+}
+
+#section_contact li p {
+    margin-left: 2px;
+}
+
+#content_contact {
+    margin-left: 40px;
+    margin-top: -15px;
+    display: flex;
+    flex-direction: row;
+}
+
+#message h2 {
+    margin-top: -5px;
+    color: white;
+    font-family: 'poppins';
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+#section_contact form {
+    margin-left: 400px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#Name, #Email {
+    width: 280px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-left: 8px;
+    border: none;
+    background: dodgerblue;
+    color: white;
+    border: 2px white solid;
+}
+
+#your_message {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 150px;
+    padding-top: 8px;
+    padding-left: 8px;
+    resize: none;
+    font-size: 14px;
+    font-family: sans-serif;
+    border: none;
+    background: dodgerblue;
+    color: white;
+    border: 2px white solid;
+}
+
+#submit {
+    margin-top: 10px;
+    width: 200px;
+    margin-left: 10px;
+    height: 50px;
+    background: dodgerblue;
+    border: 2px solid white;
+    color: white;
+    transition: 0.3s;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background: white;
+    color: dodgerblue;
+}
+
 footer {
     height: 140px;
-    background-color: #474747;
+    background-color: #232323;
 }
