@@ -3,25 +3,56 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <title>Template Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 <body>
+    <div id ="nav_fixed_scroll" class="nav_fixed">
+        <h1>NAME</h1>
+        <ul>
+            <li><a href="#banniere" id ="home_fixed" class="nav_onglet">Home</a></li>
+            <li><a href="#ancre_services" id ="services_fixed" class="nav_onglet">Services</a></li>
+            <li><a href="#ancre_team" id ="team_fixed" class="nav_onglet">Team</a></li>
+            <li><a href="#ancre_project" id ="projects_fixed" class="nav_onglet">Projects</a></li>
+            <li><a href="#ancre_offers" id ="offers_fixed" class="nav_onglet">Offers</a></li>
+            <li><a href="#section_contact" id ="contact_fixed" class="nav_onglet">Contact</a></li>
+        <ul>
+    </div>
     <div id="banniere">
-        <div id="background"></div>
+        <div id="background">
+            <figure id="banner_slide">
+                <img src="images/coworking_banner.jpg" id="background_banner_1" class="slides">
+                <img src="images/coworking_banner.jpg" id="background_banner_2" class="slides">
+                <img src="images/background_about.jpg" id="background_banner_3" class="slides">
+                <img src="images/coworking_banner.jpg" id="background_banner_1" class="slides">
+            </figure>
+        </div>
         <div id="overlay">
-            <header>
+            <header id ="header">
                 <h1>NAME</h1>
                 <nav>
                     <ul>
-                        <li><a href="#" id="HOME">Home</a></li>
-                        <li><a href="#" id="SERVICES">Services</a></li>
-                        <li><a href="#" id="ABOUT">About</a></li>
-                        <li><a href="#" id="PROJECTS">Projects</a></li>
-                        <li><a href="#" id="CONTACT">Contact</a></li>
+                        <li><a href="#banniere" class="nav_onglet">Home</a></li>
+                        <li><a href="#ancre_services" class="nav_onglet">Services</a></li>
+                        <li><a href="#ancre_team" class="nav_onglet">Team</a></li>
+                        <li><a href="#ancre_project" class="nav_onglet">Projects</a></li>
+                        <li><a href="#ancre_offers" class="nav_onglet">Offers</a></li>
+                        <li><a href="#section_contact" class="nav_onglet">Contact</a></li>
                     <ul>
                 </nav>
+                <script src="scroll.js"></script>
+                <script>
+                $(document).ready(function() {
+                    $('.nav_onglet').on('click', function() { // Au clic sur un élément
+                        var page = $(this).attr('href'); // Page cible
+                        var speed = 1000; // Durée de l'animation (en ms)
+                        $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                        return false;
+                        });
+                    });
+                </script>
             </header>
             <div id="banner">
                 <h1 id="banner_title">NAME CORPORATION</h1>
@@ -32,10 +63,11 @@
                 </div>
             </div>
             <div id="circles_images">
-                <div id="first_circle"></div>
-                <div id="second_circle"></div>
-                <div id="third_circle"></div>
+                <span id="first_circle" class ="circle_slide"></span>
+                <span id="second_circle" class ="circle_slide"></span>
+                <span id="third_circle" class ="circle_slide"></span>
             </div>
+            <div id="ancre_services"></div>
         </div>
     </div>
 
@@ -76,6 +108,7 @@
                 <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
             </div>
         </div>
+        <div id="ancre_team"></div>
     </section>
 
     <section id="section_team">
@@ -101,6 +134,7 @@ Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</
                 </div>
             </div>
         </div>
+        <div id="ancre_project"></div>
     </section>
 
     <section id="section_project">
@@ -138,6 +172,41 @@ Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</
                 <p>Get more info</p>
             </div>
         </div>
+        <div id ="ancre_offers"></div>
+    </section>
+
+    <section id="section_offers">
+        <h1>See our different offers</h1>
+        <hr id="container_underligne"></hr>
+        <div id="offers_container">
+            <div id="first_offer">
+                <h2>Low Cost</h2>
+                <h3>2.49$</h3>
+                <p>congue ac vulputate at augue</p>
+                <p>amet consectetur adpiscing vitae</p>
+                <p>elit eu libero ultrices purus</p>
+                <p>quam quis porttitor lotis auctor</p>
+                <h4>CHOOSE THIS OFFER</h4>
+            </div>
+            <div id="second_offer">
+                <h2>Classic</h2>
+                <h3>4.99$</h3>
+                <p>congue ac vulputate at augue</p>
+                <p>amet consectetur adpiscing vitae</p>
+                <p>elit eu libero ultrices purus</p>
+                <p>quam quis porttitor lotis auctor</p>
+                <h4>CHOOSE THIS OFFER</h4>
+            </div>
+            <div id="third_offer">
+                <h2>Premium</h2>
+                <h3>7.99$</h3>
+                <p>congue ac vulputate at augue</p>
+                <p>amet consectetur adpiscing vitae</p>
+                <p>elit eu libero ultrices purus</p>
+                <p>quam quis porttitor lotis auctor</p>
+                <h4>CHOOSE THIS OFFER</h4>
+            </div>
+        </div>
     </section>
 
     <section id="section_contact">
@@ -164,13 +233,11 @@ Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</
             </form>
         </div>
     </section>
-    <section id="section_more_about_us">
-    </section>
     <footer>
         <p>All copyrights reserved © 2019 - Designed & Developed by Stabien</p>
         <p>Created with HTML, CSS and Javascript</p>
     </footer>
-
+    <script src="slide.js"></script>
 </body>
 
 </html>

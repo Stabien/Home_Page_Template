@@ -51,6 +51,53 @@ body {
     width: 100%
 }
 
+.nav_fixed {
+    position: fixed;
+    background: white;
+    height: 70px;
+    width: 100%;
+    z-index: 3001;
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+    top: -15%;
+    box-shadow: 0 3px 6px 3px rgba(0,0,0,.06);
+}
+
+.nav_fixed h1 {
+    font-family: 'Poppins-Medium';
+    color: #0282ce;
+    margin-left: 250px;
+    margin-top: 13px;
+}
+
+.nav_fixed ul {
+    margin-top: 22px;
+    margin-left: 804px;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_fixed li {
+    list-style: none;
+}
+
+.nav_fixed a {
+    font-family: 'poppins-medium';
+    font-size: 17px;
+    padding-right: 17px;
+    padding-left: 17px;
+    color: black;
+    text-decoration: none;
+    transition: 0.15s;
+    padding-bottom: 19px;
+}
+
+.nav_fixed a:hover {
+    color: #0282ce;
+    border-bottom: 4px solid #0282ce;
+}
+
 header {
     top: 0px;
     left: 0px;
@@ -71,7 +118,7 @@ header h1 {
 
 nav {
     position: absolute;
-    left: 65%;
+    left: 60%;
     top: 3%;
 }
 
@@ -96,12 +143,15 @@ nav a {
     padding-bottom: 9px;
     color: white;
     text-decoration: none;
-    transition: 0.25s;
+    transition: 0.3s;
 }
 
 a:hover{
-    color: #00BFFF;
+    color: #00AAFF;
+}
 
+#banniere {
+    height: 600px;
 }
 
 #background {
@@ -110,7 +160,45 @@ a:hover{
     position: relative;
     width: 100%;
     height: 600px;
-    background: url("images/coworking_banner.jpg");
+    overflow: hidden;
+}
+
+@keyframes swipe {
+    0% {
+        margin-left: 0;
+    }
+    24% {
+        margin-left: 0;
+    }
+    33% {
+        margin-left: -100%;
+    }
+    57% {
+        margin-left: -100%;
+    }
+    66% {
+        margin-left: -200%;
+    }
+    90% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
+
+#background figure {
+    position: relative;
+    width: 400%;
+    margin: 0;
+    margin-top: -200px;
+    left: 0;
+    animation: swipe 25s infinite;
+}
+
+#background figure img {
+    width: 25%;
+    float: left;
 }
 
 #overlay {
@@ -178,7 +266,7 @@ a:hover{
 
 #try_now {
     width: 101px;
-    background-color: #00BFFF;
+    background-color: #02a3ed;
     color: white;
     margin-left: 5px;
     margin-right: 5px;
@@ -186,7 +274,7 @@ a:hover{
     font-family: sans-serif;
     padding: 8px;
     border-radius: 4px;
-    border: 2px solid #00BFFF;
+    border: 2px solid #02a3ed;
     text-align: center;
     transition: 0.33s;
 }
@@ -198,8 +286,89 @@ a:hover{
 }
 
 #try_now:hover {
-    background-color: #1E90FF;
-    border-color: #1E90FF;
+    background-color: #00c3ff;
+    border-color: #00c3ff;
+}
+
+@keyframes background_circle_3 {
+    0% {
+        background: grey;
+        border-color: grey;
+    }
+    25.5% {
+        background: grey;
+        border-color: grey;
+    }
+    25.7% {
+        background: white;
+        border-color: white;
+    }
+    58.5% {
+        background: white;
+        border-color: white;
+    }
+    58.7% {
+        background: grey;
+        border-color: grey;
+    }
+    100% {
+        background: grey;
+        border-color: grey;
+    }
+}
+
+@keyframes background_circle_1 {
+    0% {
+        background: grey;
+        border-color: grey;
+    }
+    58.5% {
+        background: grey;
+        border-color: grey;
+    }
+    58.7% {
+        background: white;
+        border-color: white;
+    }
+    91.5% {
+        background: white;
+        border-color: white;
+    }
+    91.7% {
+        background: grey;
+        border-color: grey;
+    }
+    100% {
+        background: grey;
+        border-color: grey;
+    }
+}
+
+@keyframes background_circle_2 {
+    0% {
+        background: white;
+        border-color: white;
+    }
+    25.5% {
+        background: white;
+        border-color: white;
+    }
+    25.7% {
+        background: grey;
+        border-color: grey;
+    }
+    91.5% {
+        background: grey;
+        border-color: grey;
+    }
+    91.7% {
+        background: white;
+        border-color: white;
+    }
+    100% {
+        background: white;
+        border-color: white;
+    }
 }
 
 #circles_images {
@@ -211,26 +380,36 @@ a:hover{
     flex-direction: row;
 }
 
-#first_circle, #third_circle {
+#first_circle, #second_circle, #third_circle {
     margin-right: 5px;
     width: 11px;
     height: 11px;
-    background: white;
-    border: solid 1px white;
+    background: grey;
+    border: solid 1px grey;
     border-radius: 15px;
-    opacity: 0.5;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#first_circle {
+    animation: background_circle_1 25s infinite;
 }
 
 #second_circle {
-    margin-right: 5px;
-    width: 11px;
-    height: 11px;
-    background: white;
-    border: solid 1px white;
-    border-radius: 20px;
+    animation: background_circle_2 25s infinite;
+}
+
+#third_circle {
+    animation: background_circle_3 25s infinite;
+}
+
+#ancre_services {
+    position: absolute;
+    top: 92%;
 }
 
 #section_services {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 765px;
@@ -416,7 +595,13 @@ a:hover{
     transform: translate(-50%);
 }
 
+#ancre_team {
+    position: absolute;
+    top: 92%;
+}
+
 #section_team {
+    position: relative;
     height: 650px;
     /*background-color: #474747;*/
     background: url('images/background_about.jpg') no-repeat;
@@ -443,6 +628,7 @@ a:hover{
 }
 
 #section_team p {
+    position: relative;
     color: white;
     font-family: 'poppins-medium';
     font-size: 20px;
@@ -489,9 +675,14 @@ a:hover{
     margin-top: -10px;
 }
 
+#ancre_project {
+    position: absolute;
+    top: 92%;
+}
+
 #section_project {
     position: relative;
-    height: 640px;
+    height: 700px;
     /*background: ghostwhite;*/
 }
 
@@ -535,21 +726,21 @@ a:hover{
 }
 
 #first_overlay, #second_overlay, #third_overlay, #fourth_overlay {
-    width: 310px;
-    height: 295px;
-    margin-left: 7px;
-    margin-right: 7px;
+    width: 340px;
+    height: 320px;
+    margin-left: 9px;
+    margin-right: 9px;
     transition: 0.35s;
     background-color: rgba(255, 0, 0, 0);
     opacity: 0;
     /*border: 2px solid;*/
 }
 
-#project_images img{
-    width: 310px;
-    height: 295px;
-    margin-left: 7px;
-    margin-right: 7px;
+#project_images img {
+    width: 340px;
+    height: 320px;
+    margin-left: 9px;
+    margin-right: 9px;
 }
 
 #first_overlay:hover, #second_overlay:hover, #third_overlay:hover, #fourth_overlay:hover {
@@ -585,33 +776,138 @@ a:hover{
 #overlay_project_hover p {
     color: white;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 140px;
     font-family: 'poppins';
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
+#ancre_offers {
+    position: absolute;
+    top: 92%;
+}
+
+#section_offers {
+    height: 750px;
+    background: #0282ce;
+    display: flex;
+    flex-direction: column;
+}
+
+#section_offers h1 {
+    text-align: center;
+    color: white;
+    font-family: 'poppins';
+    font-size: 37px;
+    margin-top: 45px;
+}
+
+#container_underligne {
+    width: 80px;
+    margin-top: 0px;
+    align-self: center;
+    border: 2px solid white;
+}
+
+#offers_container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    align-self: center;
+}
+
+#offers_container div {
+    width: 360px;
+    height: 480px;
+    background: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*border: #0069a6 solid 2px;*/
+    border-radius: 22px;
+}
+
+#offers_container h2 {
+    margin-top: 0;
+    color: black;
+    background: Aliceblue;
+    text-align: center;
+    border-bottom: white solid 2px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'poppins';
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+}
+
+#offers_container h3 {
+    margin-top: 5px;
+    color: #0282ce;
+    text-align: center;
+    align-self: center;
+    /*margin: auto;*/
+    font-family: 'poppins';
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+#offers_container p {
+    margin-top: -5px;
+    color: black;
+    text-align: center;
+    align-self: center;
+    /*margin: auto;*/
+    font-family: sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid Gainsboro;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+#offers_container h4 {
+    color: white;
+    background: #0282ce;
+    /*margin: auto;*/
+    font-family: 'poppins';
+    font-size: 15px;
+    border-bottom: 1px solid #0282ce;
+    border-radius: 30px;
+    width: 170px;
+    padding: 12px;
+    text-align: center;
+    align-self: center;
+    margin: auto;
+    margin-bottom: -10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#offers_container h4:hover {
+    width: 180px;
+}
+
 #section_contact {
-    background: dodgerblue;
-    height: 700px;
+    height: 670px;
+    background: white;
     display: flex;
     flex-direction: column;
 }
 
 #section_contact h1 {
     text-align: center;
-    color: white;
+    color: black;
     font-family: 'poppins';
     font-size: 35px;
     margin-bottom: 0;
+    opacity: 0.8;
     /*border-bottom: solid 3px white;
     padding-bottom: 25px;*/
 }
 
 #section_contact h2 {
     text-align: center;
-    color: white;
+    color: grey;
     font-family: 'poppins';
     font-size: 18px;
     opacity: 0.8;
@@ -619,9 +915,10 @@ a:hover{
 }
 
 #section_contact h3 {
-    color: white;
+    color: black;
     font-family: 'poppins';
     font-size: 28px;
+    opacity: 0.8;
 }
 
 #section_contact ul {
@@ -631,7 +928,7 @@ a:hover{
 
 #section_contact li {
     margin-bottom: -3px;
-    color: white;
+    color: grey;
     list-style: none;
     font-family: 'poppins';
     font-size: 18px;
@@ -650,10 +947,11 @@ a:hover{
 
 #message h3 {
     margin-top: -2px;
-    color: white;
+    color: black;
     font-family: 'poppins';
     margin-left: 10px;
     font-size: 28px;
+    opacity: 0.8;
 }
 
 #section_contact form {
@@ -664,33 +962,37 @@ a:hover{
 }
 
 ::placeholder {
-    color: white;
+    color: grey;
     opacity: 0.8;
 }
 
 #First_Name, #Last_Name{
     width: 250px;
-    height: 40px;
+    height: 42px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
     padding-left: 8px;
-    background: dodgerblue;
-    color: white;
-    border: 2px white solid;
+    background: #f5f5f5;
+    color: black;
+    /*border: 1px #676767 solid;*/
+    border: 0;
+/*    border: 2px #676767 solid;*/
     transition: 0.35s;
     font-size: 15px;
 }
 
 #Email {
-    height: 40px;
+    height: 42px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
     padding-left: 8px;
-    background: dodgerblue;
-    color: white;
-    border: 2px white solid;
+    background: #f5f5f5;
+    color: black;
+    border: 0;
+/*    border: 2px #676767 solid;
+    /*border: 1px #676767 solid;*/
     transition: 0.35s;
     font-size: 15px;
 }
@@ -699,22 +1001,24 @@ a:hover{
     position: relative;
     margin-left: 10px;
     margin-right: 10px;
-    height: 150px;
+    height: 160px;
     padding-top: 8px;
     padding-left: 8px;
     resize: none;
     font-size: 14px;
     font-family: sans-serif;
     border: none;
-    background: dodgerblue;
-    color: white;
-    border: 2px white solid;
+    background: #f5f5f5;
+    color: black;
+    border: 0;
+    /*border: 2px #676767 solid;
+    /*border: 1px #676767 solid;*/
     transition: 0.35s;
     font-size: 15px;
 }
 
-#First_Name:focus, #Last_Name:focus, #Email:focus, #your_message:focus{
-    background: #1581eb;
+#First_Name:focus, #Last_Name:focus, #Email:focus, #your_message:focus {
+    background: #e5e5e5;
 }
 
 #submit {
@@ -722,24 +1026,20 @@ a:hover{
     width: 200px;
     margin-left: 10px;
     height: 50px;
-    background: dodgerblue;
-    border: 2px solid white;
-    color: white;
+    background: white;
+    color: #0282ce;
+    border: 2px solid #0282ce;
     transition: 0.3s;
-    border-radius: 2px;
     font-size: 15px;
+
 }
 
 #submit:hover {
     cursor: pointer;
-    background: white;
-    color: dodgerblue;
+    background: #0282ce;
+    color: white;
+    border-radius: 3px;
 }
-
-/*#section_more_about_us {
-    height: 300px;
-    background: #474747;
-}*/
 
 footer {
     height: 80px;
@@ -752,7 +1052,7 @@ footer p {
     color: white;
     font-family: sans-serif;
     margin-top: 34px;
-    margin-left: 300px;
+    margin-left: 320px;
     font-size: 14px;
-    margin-right: 200px;
+    margin-right: 170px;
 }
