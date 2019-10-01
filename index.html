@@ -153,17 +153,17 @@
             <p>hasellus ligula massa, congue ac vulputate non, dignissim at augue. Sed auctor fringilla quam quis porttitor.
 Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</p>
             <div id="person_images">
-                <div id="container_first_person">
+                <div class="container_person">
                     <img src="images/first_person.jpg" id ="first_person">
                     <h1>Daniel Thomas</h1>
                     <h2>Web developper</h2>
                 </div>
-                <div id="container_second_person">
+                <div class="container_person">
                     <img src="images/second_person.jpg" id ="second_person">
                     <h1>Annie Willis</h1>
                     <h2>Community manager</h2>
                 </div>
-                <div id="container_third_person">
+                <div class="container_person">
                     <img src="images/third_person.jpg" id ="third_person">
                     <h1>Christian Smith</h1>
                     <h2>Expert in marketing</h2>
@@ -177,35 +177,43 @@ Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</
         <h1>Project Realized</h1>
         <h2>Lorem ipsum dolor sit amet consectetur adpiscing elit.</h2>
         <div id="project_images">
-            <div id="first_images_container">
-                <img src="images/first_project.jpg" id="first_project">
-                <h3>07/11/18</h3>
+            <div class="project_responsive">
+                <div id="first_images_container">
+                    <img src="images/first_project.jpg" id="first_project">
+                    <h3>07/11/18</h3>
+                </div>
+                <div id="second_images_container">
+                    <img src="images/second_project.png" id="second_project">
+                    <h3>07/11/18</h3>
+                </div>
             </div>
-            <div id="second_images_container">
-                <img src="images/second_project.png" id="second_project">
-                <h3>07/11/18</h3>
-            </div>
-            <div id="third_images_container">
-                <img src="images/third_project.jpg" id="third_project">
-                <h3>07/11/18</h3>
-            </div>
-            <div id="fourth_images_container">
-                <img src="images/fourth_project.jpg" id="fourth_project">
-                <h3>07/11/18</h3>
+            <div class="project_responsive">
+                <div id="third_images_container">
+                    <img src="images/third_project.jpg" id="third_project">
+                    <h3>07/11/18</h3>
+                </div>
+                <div id="fourth_images_container">
+                    <img src="images/fourth_project.jpg" id="fourth_project">
+                    <h3>07/11/18</h3>
+                </div>
             </div>
         </div>
         <div id="overlay_project_hover">
-            <div id="first_overlay">
-                <p>Get more info</p>
+            <div id ="top_project_responsive" class="project_responsive">
+                <div id="first_overlay">
+                    <p>Get more info</p>
+                </div>
+                <div id="second_overlay">
+                    <p>Get more info</p>
+                </div>
             </div>
-            <div id="second_overlay">
-                <p>Get more info</p>
-            </div>
-            <div id="third_overlay">
-                <p>Get more info</p>
-            </div>
-            <div id="fourth_overlay">
-                <p>Get more info</p>
+            <div id ="bottom_project_responsive" class="project_responsive">
+                <div id="third_overlay">
+                    <p>Get more info</p>
+                </div>
+                <div id="fourth_overlay">
+                    <p>Get more info</p>
+                </div>
             </div>
         </div>
         <div id ="ancre_offers"></div>
@@ -270,8 +278,10 @@ Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</
         </div>
     </section>
     <footer>
-        <p>All copyrights reserved © 2019 - Designed & Developed by Stabien</p>
-        <p>Created with HTML, CSS and Javascript</p>
+        <div id="container_footer">
+            <p>All copyrights reserved © 2019 - Designed & Developed by Stabien</p>
+            <p>Created with HTML, CSS and Javascript</p>
+        </div>
     </footer>
     <script src="slide.js"></script>
 </body>
