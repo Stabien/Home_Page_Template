@@ -98,6 +98,11 @@ body {
     border-bottom: 4px solid #0282ce;
 }
 
+#menu_deroulant a:hover {
+    color: black;
+    border: none;
+}
+
 header {
     top: 0px;
     left: 0px;
@@ -143,10 +148,14 @@ nav a {
     transition: 0.3s;
 }
 
-a:hover{
+.nav_onglet:hover{
     color: #00AAFF;
 }
 
+
+.nav_fixed span {
+    display: none;
+}
 
 @media all and (min-width: 1480px) and (max-width: 1720px) {
     .nav_fixed ul {
@@ -219,6 +228,10 @@ a:hover{
 #background figure img {
     width: 25%;
     float: left;
+}
+
+#menu_button {
+    display: none;
 }
 
 #overlay {
@@ -329,13 +342,107 @@ a:hover{
         display: none;
     }
     header h1 {
-        margin-left: auto;
+        margin-left: 40px;
+        font-size: 33px;
     }
-    .nav_fixed a {
+    .nav_onglet {
         display: none;
     }
     .nav_fixed h1 {
         margin-left: 100px;
+    }
+    #menu_button {
+        display: block;
+    }
+    #menu_deroulant {
+        position: absolute;
+        margin-top: 70px;
+        left: 0%;
+        flex-direction: column;
+        transition: 0.3s;
+        width: 100%;
+    }
+    #menu_deroulant a {
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid Gainsboro;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: white;
+        font-family: "poppins";
+        transition: 0.25s;
+        width: 100%;
+        text-align: center;
+        margin-left: -12px;
+    }
+    #menu_deroulant a:hover, #menu_deroulant_banniere a:hover {
+        color: #0282ce;
+        border-bottom: 1px solid Gainsboro;
+    }
+    .nav_fixed span {
+        position: absolute;
+        font-size: 30px;
+        display: block;
+        border: 1px solid;
+        width: 50px;
+        height: 30px;
+        padding-left: 19px;
+        padding-bottom: 20px;
+        cursor: pointer;
+        top: 10px;
+        right: 10%;
+        transition: 0.3s;
+    }
+    header span {
+        position: absolute;
+        display: block;
+        top: 22px;
+        right: 10%;
+        color: white;
+        font-size: 30px;
+        border: 1px solid;
+        width: 50px;
+        height: 30px;
+        padding-left: 19px;
+        padding-bottom: 20px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header span:hover {
+        background: white;
+        color: black;
+        border-color: white;
+    }
+
+    .nav_fixed span:hover {
+        background: #0282ce;
+        border-color: #0282ce;
+        color: white;
+    }
+    #menu_deroulant_banniere {
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0%;
+        width: 100%;
+        z-index: 1000;
+    }
+    #menu_deroulant_banniere a, #menu_deroulant_banniere h3 {
+        width: 100%;
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid Gainsboro;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: white;
+        font-family: "poppins";
+        transition: 0.25s;
+        text-align: center;
+    }
+    #menu_deroulant_banniere h3 {
+        margin-bottom: 0;
+        background: #0282ce;
+        color: white;
     }
 }
 
@@ -349,6 +456,10 @@ a:hover{
     }
     #overlay h2 {
         font-size: 16px;
+    }
+    #menu_deroulant a {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -368,6 +479,10 @@ a:hover{
         font-size: 16px;
         width: 100px;
     }
+    #menu_deroulant a {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media all and (max-width: 650px) {
@@ -379,6 +494,25 @@ a:hover{
     .nav_fixed {
         height: 50px;
     }
+    .nav_fixed span, header span {
+        font-size: 24px;
+        padding-bottom: 15px;
+        margin-top: -5px;
+        width: 45px;
+        height: 20px;
+        text-decoration: none;
+    }
+    #menu_deroulant {
+        margin-top: 45px;
+    }
+    #menu_deroulant a {
+        margin: auto;
+        text-align: center;
+    }
+    header span {
+        margin-top: 2px;
+    }
+
 }
 /* Fin Media Queries pour la bannière */
 
@@ -1146,6 +1280,7 @@ a:hover{
     font-family: 'poppins';
     font-size: 28px;
     opacity: 0.8;
+    margin-bottom: 20px;
 }
 
 #section_contact ul {
@@ -1158,10 +1293,27 @@ a:hover{
     list-style: none;
     font-family: 'poppins';
     font-size: 18px;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon_contact {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.icon_network {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    margin-right: 7px;
+    cursor: pointer;
 }
 
 #section_contact li p {
     margin-left: 2px;
+    margin-top: 7px;
 }
 
 #message h3 {
@@ -1185,7 +1337,7 @@ a:hover{
     opacity: 0.8;
 }
 
-#First_Name, #Last_Name{
+#First_Name, #Last_Name {
     width: 250px;
     height: 42px;
     margin-left: 10px;
@@ -1310,6 +1462,16 @@ a:hover{
     }
     #submit {
         width: 140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #section_contact {
+        height: 1150px;
+    }
+    #content_contact ul, #content_contact form {
         margin-left: auto;
         margin-right: auto;
     }

@@ -9,23 +9,32 @@
 </head>
 
 <body>
-    <div id ="nav_fixed_scroll" class="nav_fixed">
+    <div id="nav_fixed_scroll" class="nav_fixed">
         <h1>NAME</h1>
         <ul>
-            <li><a href="#banniere" id ="home_fixed" class="nav_onglet">Home</a></li>
-            <li><a href="#ancre_services" id ="services_fixed" class="nav_onglet">Services</a></li>
-            <li><a href="#ancre_team" id ="team_fixed" class="nav_onglet">Team</a></li>
-            <li><a href="#ancre_project" id ="projects_fixed" class="nav_onglet">Projects</a></li>
-            <li><a href="#ancre_offers" id ="offers_fixed" class="nav_onglet">Offers</a></li>
-            <li><a href="#section_contact" id ="contact_fixed" class="nav_onglet">Contact</a></li>
-        <ul>
+            <li><a href="#banniere" class="nav_onglet">Home</a></li>
+            <li><a href="#ancre_services" class="nav_onglet">Services</a></li>
+            <li><a href="#ancre_team" class="nav_onglet">Team</a></li>
+            <li><a href="#ancre_project" class="nav_onglet">Projects</a></li>
+            <li><a href="#ancre_offers" class="nav_onglet">Offers</a></li>
+            <li><a href="#section_contact" class="nav_onglet">Contact</a></li>
+        </ul>
+        <span id="button_display">...</span>
+        <div id="menu_deroulant" style ="display: none">
+            <a href="#banniere" class="nav_deroulant">Home</a>
+            <a href="#ancre_services" class="nav_deroulant">Services</a>
+            <a href="#ancre_team" class="nav_deroulant">Team</a>
+            <a href="#ancre_project" class="nav_deroulant">Projects</a>
+            <a href="#ancre_offers" class="nav_deroulant">Offers</a>
+            <a href="#section_contact"  class="nav_deroulant">Contact</a>
+        </div>
     </div>
     <div id="banniere">
         <div id="background">
             <figure id="banner_slide">
                 <img src="images/coworking_banner.jpg" id="background_banner_1" class="slides">
-                <img src="images/coworking_banner.jpg" id="background_banner_2" class="slides">
-                <img src="images/background_about.jpg" id="background_banner_3" class="slides">
+                <img src="images/second_image_banner.jpg" id="background_banner_2" class="slides">
+                <img src="images/third_image_banner.jpg" id="background_banner_3" class="slides">
                 <img src="images/coworking_banner.jpg" id="background_banner_1" class="slides">
             </figure>
         </div>
@@ -34,6 +43,7 @@
                 <h1>NAME</h1>
                 <nav>
                     <ul>
+
                         <li><a href="#banniere" class="nav_onglet">Home</a></li>
                         <li><a href="#ancre_services" class="nav_onglet">Services</a></li>
                         <li><a href="#ancre_team" class="nav_onglet">Team</a></li>
@@ -42,7 +52,16 @@
                         <li><a href="#section_contact" class="nav_onglet">Contact</a></li>
                     <ul>
                 </nav>
-                <script src="scroll.js"></script>
+                <span id ="menu_button">...</span>
+                <div id="menu_deroulant_banniere" style ="display: none">
+                    <h3>Menu</h3>
+                    <a href="#banniere" class="nav_deroulant">Home</a>
+                    <a href="#ancre_services" class="nav_deroulant">Services</a>
+                    <a href="#ancre_team" class="nav_deroulant">Team</a>
+                    <a href="#ancre_project" class="nav_deroulant">Projects</a>
+                    <a href="#ancre_offers" class="nav_deroulant">Offers</a>
+                    <a href="#section_contact"  class="nav_deroulant">Contact</a>
+                </div>
                 <script>
                 $(document).ready(function() {
                     $('.nav_onglet').on('click', function() { // Au clic sur un élément
@@ -50,8 +69,16 @@
                         var speed = 1000; // Durée de l'animation (en ms)
                         $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
                         return false;
-                        });
                     });
+                });
+                $(document).ready(function() {
+                    $('.nav_deroulant').on('click', function() { // Au clic sur un élément
+                        var page = $(this).attr('href'); // Page cible
+                        var speed = 1000; // Durée de l'animation (en ms)
+                        $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                        return false;
+                    });
+                });
                 </script>
             </header>
             <div id="banner">
@@ -260,10 +287,16 @@ Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</
         <div id="content_contact">
             <ul>
                 <li><h3>Contact Infos</h3></li>
-                <li><p>Address : 18 Avenue de Meudon</p></li>
-                <li><p>Email : email@address.com</p></li>
-                <li><p>Phone : 01 45 00 00 00</p></li>
-                <li><p>Social network : Facebook</li>
+                <li><img src ="images/icon_address.png" class="icon_contact"><p>Address : 18 Avenue de Meudon</p></li>
+                <li><img src ="images/icon_mail.png" class="icon_contact"><p>Email : email@address.com</p></li>
+                <li><img src ="images/icon_phone.png" class="icon_contact"><p>Phone : 01 45 00 00 00</p></li>
+                <li>
+                    <img src ="images/icon_facebook.png" class="icon_network">
+                    <img src ="images/icon_twitter.png" class="icon_network">
+                    <img src ="images/icon_instagram.png" class="icon_network">
+                    <img src ="images/icon_linkedin.png" class="icon_network">
+                    <img src ="images/icon_pinterest.png" class="icon_network">
+                </li>
             </ul>
             <form id="message" class="box" action="index.html" method="post">
                 <h3>Send us a message</h3>
@@ -283,7 +316,8 @@ Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</
             <p>Created with HTML, CSS and Javascript</p>
         </div>
     </footer>
-    <script src="slide.js"></script>
+    <script src="scroll.js"></script>
+    <script src="menu_deroulant.js"></script>
 </body>
 
 </html>

@@ -5,13 +5,19 @@
 
 var nav_link = document.getElementsByClassName("nav_onglet");
 var nav = document.getElementById("nav_fixed_scroll");
+var menu = document.getElementById("menu_deroulant");
+var menu_banner = document.getElementById("menu_deroulant_banniere");
 
 window.addEventListener('scroll', function() {
     if (window.scrollY > 200) {
         nav.style.top = "0%";
     }
+    if (window.scrollY > 400) {
+        menu_banner.style.display = "none";
+    }
     if (window.scrollY <= 199) {
         nav.style.top = "-15%";
+        menu.style.display = "none";
     }
     if (window.scrollY < 600) {
         for (var i = 0; i < 6; i++) {
