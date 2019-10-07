@@ -49,6 +49,7 @@ body {
     flex-direction: column;
     margin: 0;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .nav_fixed {
@@ -106,8 +107,7 @@ body {
 header {
     top: 0px;
     left: 0px;
-    max-width: 1920px;
-    min-width: 1020px;
+    width: 100%;
     height: 70px;
     display: flex;
     flex-direction: row;
@@ -178,7 +178,9 @@ nav a {
 }
 
 #banniere {
+    width: 100%;
     height: 600px;
+    overflow: hidden;
 }
 
 #background {
@@ -187,7 +189,7 @@ nav a {
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 1920px;
+    width: 1920px;
     height: 600px;
     overflow: hidden;
 }
@@ -217,7 +219,7 @@ nav a {
 }
 
 #background figure {
-    position: absolute;
+    /*position: absolute;*/
     width: 400%;
     margin: 0;
     margin-top: -200px;
