@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=600, maximum-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Template Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="nav_fixed_scroll" class="nav_fixed">
+        <h1>NAME</h1>
+        <ul>
+            <li><a href="#banniere" class="nav_onglet">Home</a></li>
+            <li><a href="#ancre_services" class="nav_onglet">Services</a></li>
+            <li><a href="#ancre_team" class="nav_onglet">Team</a></li>
+            <li><a href="#ancre_project" class="nav_onglet">Projects</a></li>
+            <li><a href="#ancre_offers" class="nav_onglet">Offers</a></li>
+            <li><a href="#section_contact" class="nav_onglet">Contact</a></li>
+        </ul>
+        <span id="button_display">...</span>
+        <div id="menu_deroulant" style ="display: none">
+            <a href="#banniere" class="nav_deroulant">Home</a>
+            <a href="#ancre_services" class="nav_deroulant">Services</a>
+            <a href="#ancre_team" class="nav_deroulant">Team</a>
+            <a href="#ancre_project" class="nav_deroulant">Projects</a>
+            <a href="#ancre_offers" class="nav_deroulant">Offers</a>
+            <a href="#section_contact"  class="nav_deroulant">Contact</a>
+        </div>
+    </div>
+    <div id="banniere">
+        <div id="background">
+            <figure id="banner_slide">
+                <img src="images/coworking_banner.jpg" id="background_banner_1" class="slides">
+                <img src="images/second_image_banner.jpg" id="background_banner_2" class="slides">
+                <img src="images/third_image_banner.jpg" id="background_banner_3" class="slides">
+                <img src="images/coworking_banner.jpg" id="background_banner_1" class="slides">
+            </figure>
+        </div>
+        <div id="overlay">
+            <header>
+                <h1>NAME</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#banniere" class="nav_onglet">Home</a></li>
+                        <li><a href="#ancre_services" class="nav_onglet">Services</a></li>
+                        <li><a href="#ancre_team" class="nav_onglet">Team</a></li>
+                        <li><a href="#ancre_project" class="nav_onglet">Projects</a></li>
+                        <li><a href="#ancre_offers" class="nav_onglet">Offers</a></li>
+                        <li><a href="#section_contact" class="nav_onglet">Contact</a></li>
+                    <ul>
+                </nav>
+                <span id ="menu_button">...</span>
+                <div id="menu_deroulant_banniere" style ="display: none">
+                    <h3>Menu</h3>
+                    <a href="#banniere" class="nav_deroulant">Home</a>
+                    <a href="#ancre_services" class="nav_deroulant">Services</a>
+                    <a href="#ancre_team" class="nav_deroulant">Team</a>
+                    <a href="#ancre_project" class="nav_deroulant">Projects</a>
+                    <a href="#ancre_offers" class="nav_deroulant">Offers</a>
+                    <a href="#section_contact"  class="nav_deroulant">Contact</a>
+                </div>
+                <script>
+                $(document).ready(function() {
+                    $('.nav_onglet, .nav_deroulant').on('click', function() { 
+                        var page = $(this).attr('href');
+                        var speed = 1000; 
+                        $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); 
+                        return false;
+                    });
+                });
+                </script>
+            </header>
+            <div id="banner">
+                <h1 id="banner_title">NAME CORPORATION</h1>
+                <h2>LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADPISCING ELIT.</h2>
+                <div id="banner_buttons">
+                    <a href="#" id="learn_more">Learn More</a>
+                    <a href="#" id="try_now">Try Now</a>
+                </div>
+            </div>
+            <div id="circles_images">
+                <span id="first_circle" class ="circle_slide"></span>
+                <span id="second_circle" class ="circle_slide"></span>
+                <span id="third_circle" class ="circle_slide"></span>
+            </div>
+            <div id="ancre_services"></div>
+        </div>
+    </div>
+
+    <section id="section_services">
+        <h1 id="title_services">Our Services</h1>
+        <h2>The services you need to get for you and your company</h2>
+        <div id="top_services">
+            <div class="shape_top">
+                <img src="images/icon_devices.png">
+                <h1>Devices</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+            <div class="shape_top">
+                <img src="images/icon_planet.png">
+                <h1>Global</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+            <div class="shape_top">
+                <img src="images/icon_social.png">
+                <h1>Social</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+        </div>
+        <div id="bottom_services">
+            <div class="shape_bottom">
+                <img src="images/icon_innovation.png">
+                <h1>Innovation</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+            <div class="shape_bottom">
+                <img src="images/icon_connected.png">
+                <h1>Connected</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+            <div class="shape_bottom">
+                <img src="images/icon_safety.png">
+                <h1>Safety</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+        </div>
+        <div id="top_services_responsive">
+            <div class="shape_responsive">
+                <img src="images/icon_devices.png">
+                <h1>Devices</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+            <div class="shape_responsive">
+                <img src="images/icon_planet.png">
+                <h1>Global</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+        </div>
+        <div id="mid_services_responsive">
+            <div class="shape_responsive">
+                <img src="images/icon_innovation.png">
+                <h1>Innovation</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+            <div class="shape_responsive">
+                <img src="images/icon_social.png">
+                <h1>Social</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+        </div>
+        <div id="bottom_services_responsive">
+            <div class="shape_responsive">
+                <img src="images/icon_connected.png">
+                <h1>Connected</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+            <div class="shape_responsive">
+                <img src="images/icon_safety.png">
+                <h1>Safety</h1>
+                <p>Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.</p>
+            </div>
+        </div>
+        <div id="ancre_team"></div>
+    </section>
+
+    <section id="section_team">
+        <div id="overlay_section_team">
+            <h1>Our Team</h1>
+            <p>hasellus ligula massa, congue ac vulputate non, dignissim at augue. Sed auctor fringilla quam quis porttitor.
+Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi.</p>
+            <div id="person_images">
+                <div class="container_person">
+                    <img src="images/first_person.jpg" id ="first_person">
+                    <h1>Daniel Thomas</h1>
+                    <h2>Web developper</h2>
+                </div>
+                <div class="container_person">
+                    <img src="images/second_person.jpg" id ="second_person">
+                    <h1>Annie Willis</h1>
+                    <h2>Community manager</h2>
+                </div>
+                <div class="container_person">
+                    <img src="images/third_person.jpg" id ="third_person">
+                    <h1>Christian Smith</h1>
+                    <h2>Expert in marketing</h2>
+                </div>
+            </div>
+        </div>
+        <div id="ancre_project"></div>
+    </section>
+
+    <section id="section_project">
+        <h1>Project Realized</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adpiscing elit.</h2>
+        <div id="project_images">
+            <div class="project_responsive">
+                <div id="first_images_container">
+                    <img src="images/first_project.jpg" id="first_project">
+                    <h3>07/11/18</h3>
+                </div>
+                <div id="second_images_container">
+                    <img src="images/second_project.png" id="second_project">
+                    <h3>07/11/18</h3>
+                </div>
+            </div>
+            <div class="project_responsive">
+                <div id="third_images_container">
+                    <img src="images/third_project.jpg" id="third_project">
+                    <h3>07/11/18</h3>
+                </div>
+                <div id="fourth_images_container">
+                    <img src="images/fourth_project.jpg" id="fourth_project">
+                    <h3>07/11/18</h3>
+                </div>
+            </div>
+        </div>
+        <div id="overlay_project_hover">
+            <div id ="top_project_responsive" class="project_responsive">
+                <div id="first_overlay">
+                    <p>Get more info</p>
+                </div>
+                <div id="second_overlay">
+                    <p>Get more info</p>
+                </div>
+            </div>
+            <div id ="bottom_project_responsive" class="project_responsive">
+                <div id="third_overlay">
+                    <p>Get more info</p>
+                </div>
+                <div id="fourth_overlay">
+                    <p>Get more info</p>
+                </div>
+            </div>
+        </div>
+        <div id ="ancre_offers"></div>
+    </section>
+
+    <section id="section_offers">
+        <h1>See our different offers</h1>
+        <hr id="container_underligne"></hr>
+        <div id="offers_container">
+            <div id="first_offer">
+                <h2>Low Cost</h2>
+                <h3>2.49$</h3>
+                <p>congue ac vulputate at augue</p>
+                <p>amet consectetur adpiscing vitae</p>
+                <p>elit eu libero ultrices purus</p>
+                <p>quam quis porttitor lotis auctor</p>
+                <h4>CHOOSE THIS OFFER</h4>
+            </div>
+            <div id="second_offer">
+                <h2>Classic</h2>
+                <h3>4.99$</h3>
+                <p>congue ac vulputate at augue</p>
+                <p>amet consectetur adpiscing vitae</p>
+                <p>elit eu libero ultrices purus</p>
+                <p>quam quis porttitor lotis auctor</p>
+                <h4>CHOOSE THIS OFFER</h4>
+            </div>
+            <div id="third_offer">
+                <h2>Premium</h2>
+                <h3>7.99$</h3>
+                <p>congue ac vulputate at augue</p>
+                <p>amet consectetur adpiscing vitae</p>
+                <p>elit eu libero ultrices purus</p>
+                <p>quam quis porttitor lotis auctor</p>
+                <h4>CHOOSE THIS OFFER</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_contact">
+        <h1>Contact Us</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adpiscing elit.</h2>
+        <div id="border_title"></div>
+        <div id="content_contact">
+            <ul>
+                <li><h3>Contact Infos</h3></li>
+                <li><img src ="images/icon_address.png" class="icon_contact"><p>Address : 18 Avenue de Meudon</p></li>
+                <li><img src ="images/icon_mail.png" class="icon_contact"><p>Email : email@address.com</p></li>
+                <li><img src ="images/icon_phone.png" class="icon_contact"><p>Phone : 01 45 00 00 00</p></li>
+                <li>
+                    <img src ="images/icon_facebook.png" class="icon_network">
+                    <img src ="images/icon_twitter.png" class="icon_network">
+                    <img src ="images/icon_instagram.png" class="icon_network">
+                    <img src ="images/icon_linkedin.png" class="icon_network">
+                    <img src ="images/icon_pinterest.png" class="icon_network">
+                </li>
+            </ul>
+            <form id="message" class="box" action="index.html" method="post">
+                <h3>Send us a message</h3>
+                <div id="container_info_message">
+                    <input id ="First_Name" type="text" name="" placeholder="First Name">
+                    <input id ="Last_Name" type="text" name="" placeholder="Last Name">
+                </div>
+                <input id ="Email" type="text" name="" placeholder="Email">
+                <textarea id ="your_message" type="text" name="" placeholder="Your Message"></textarea>
+                <input id ="submit" type="submit" name="" value="Submit">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div id="container_footer">
+            <p>All copyrights reserved &copy; 2019 - Designed & Developed by Stabien</p>
+            <p>Created with HTML, CSS and Javascript</p>
+        </div>
+    </footer>
+    <script src="scroll.js"></script>
+    <script src="menu_deroulant.js"></script>
+</body>
+
+</html>
+	
